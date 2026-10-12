@@ -850,9 +850,9 @@ do
       python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
-      javascript = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "prettierd", "esliint_d" },
       typescript = { "prettierd", "prettier", stop_after_first = true },
-      javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+      javascriptreact = { "prettierd", "esliint_d" },
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
     },
   }
@@ -1030,6 +1030,10 @@ do
 
   vim.cmd("language en_GB.UTF-8")
   vim.opt.langmenu = 'en_GB.UTF-8'
+
+  vim.opt.foldmethod = 'expr'
+  vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+  vim.opt.foldlevelstart = 99 -- start with everything unfolded
 
   -- NOTE: You can add your own plugins, configuration, etc. in `lua/custom/plugins/*.lua`.
   --

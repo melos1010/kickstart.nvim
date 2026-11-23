@@ -99,7 +99,7 @@ do
   vim.g.maplocalleader = ' '
 
   -- Set to true if you have a Nerd Font installed and selected in the terminal
-  vim.g.have_nerd_font = false
+  vim.g.have_nerd_font = true
 
   -- [[ Setting options ]]
   --  See `:help vim.o`
@@ -737,6 +737,7 @@ do
     -- gopls = {},
     pyright = {},
     ts_ls = {},
+    eslint = {},
     -- tsc = {},
     --
     -- Some languages (like rust) have entire language plugins that can be useful:
@@ -850,9 +851,9 @@ do
       python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
-      javascript = { "prettierd", "esliint_d" },
+      javascript = { "prettierd", "eslint_d" },
       typescript = { "prettierd", "prettier", stop_after_first = true },
-      javascriptreact = { "prettierd", "esliint_d" },
+      javascriptreact = { "prettierd", "eslint_d" },
       typescriptreact = { "prettierd", "prettier", stop_after_first = true },
     },
   }
